@@ -12,7 +12,18 @@ class HomePage extends StatelessWidget{
         title: Text ('App Componentes'),
       ),body: ListView(
         children: <Widget>[
-            
+              ListTile(
+              title: Text('hola mundo'),
+              ),
+              Divider(),
+              ListTile(
+              title: Text('hola mundo'),
+              ),
+              Divider(),
+              ListTile(
+              title: Text('hola mundo'),
+              ),
+              Divider()
         ],
       ),
     );
