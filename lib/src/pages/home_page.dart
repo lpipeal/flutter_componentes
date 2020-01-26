@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
- 
+
+import 'package:componentes/src/providers/menu_provider.dart';
+
 class HomePage extends StatelessWidget {
 
   final opciones = ['Uno','Dos','Tres','Cuatro','Cinco','seis','siete','ocho','nueve'];
@@ -12,10 +14,9 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Material App Bar'),
         ),
-        body: ListView(
-          children: //_crearItems(),
-                _crearItemsCorta()
-                  )
+        body: //_crearItems(),
+                _lista()
+                  
                 ),
               );
           
@@ -23,52 +24,28 @@ class HomePage extends StatelessWidget {
           
             }
           
-            List<Widget> _crearItems() {
+            
 
-              List<Widget> lista = new List<Widget>();
+    Widget _lista() {
 
-                for (String opt in opciones) {
-                  
-                  final tempWidget =ListTile(
-                    
-                    leading: Icon(Icons.account_box),
-                    title: Text(opt),
-                    onTap: (){},
-
-                    
-                  );
-                  //Metodo en cascada para 
-                  lista..add(tempWidget)
-                       ..add(Divider(height: 50));
+      print(menuProvider.opciones);
+     
+        return ListView(
+            children: _listaItems(),
+                    );
+            
                 }
+            
+              List <Widget>_listaItems() {
+                    return [
+                      ListTile(title: Text('Hola mundo')),
+                      ListTile(title: Text('Hola mundo')),
+                      ListTile(title: Text('Hola mundo')),
+                      ListTile(title: Text('Hola mundo')),
+                      ListTile(title: Text('Hola mundo')),
+                    ];
 
-              return lista;
-            }
-
-  List <Widget> _crearItemsCorta() {
-
-          return opciones.map((item){
-
-            return Column(
-              children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.account_box),
-                        title: Text(item),
-                        subtitle: Text('Numero'),
-                        onTap: (){},
-                        trailing: Icon(Icons.keyboard_arrow_right),
-                ),
-                Divider(height: 35)
-              ],
-              
-            );
-
-          }).toList();
-
-      
-
-
-  }
+              }
 
 
 
