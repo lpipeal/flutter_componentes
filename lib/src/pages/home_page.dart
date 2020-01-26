@@ -1,32 +1,25 @@
 import 'package:flutter/material.dart';
-
-class HomePage extends StatelessWidget{
-
-  final opciones = ['Uno','Dos','Tres','Cuatro','Cinco',''];
-
+ 
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   
-    return Scaffold(
-      appBar: AppBar(
-        title: Text ('App Componentes'),
-      ),body: ListView(
-        children: <Widget>[
-              ListTile(
-              title: Text('hola mundo'),
-              ),
-              Divider(),
-              ListTile(
-              title: Text('hola mundo'),
-              ),
-              Divider(),
-              ListTile(
-              title: Text('hola mundo'),
-              ),
-              Divider()
+    return MaterialApp(
+      title: 'Material App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Material App Bar'),
+        ),
+        body: ListView(
+          children: <Widget>[
+          
+          
+
         ],
+        )
       ),
     );
-  }
 
+    
+
+  }
 }
