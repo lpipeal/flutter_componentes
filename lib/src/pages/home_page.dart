@@ -13,7 +13,8 @@ class HomePage extends StatelessWidget {
           title: Text('Material App Bar'),
         ),
         body: ListView(
-          children: _crearItems(),
+          children: //_crearItems(),
+                _crearItemsCorta()
                   )
                 ),
               );
@@ -42,6 +43,25 @@ class HomePage extends StatelessWidget {
                 }
 
               return lista;
-
             }
+
+  List <Widget> _crearItemsCorta() {
+
+          var widgets = opciones.map((item){
+
+            return ListTile(
+              leading: Icon(Icons.account_box),
+                    title: Text(item),
+                    onTap: (){},
+            );
+
+          }).toList();
+
+      return widgets;
+
+
+  }
+
+
+
 }
