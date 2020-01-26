@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
 
   List <Widget> _crearItemsCorta() {
 
-          var widgets = opciones.map((item){
+          return opciones.map((item){
 
             return ListTile(
               leading: Icon(Icons.account_box),
@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
 
           }).toList();
 
-      return widgets;
+      
 
 
   }
