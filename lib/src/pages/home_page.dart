@@ -49,10 +49,18 @@ class HomePage extends StatelessWidget {
 
           return opciones.map((item){
 
-            return ListTile(
-              leading: Icon(Icons.account_box),
-                    title: Text(item),
-                    onTap: (){},
+            return Column(
+              children: <Widget>[
+                ListTile(
+                  leading: Icon(Icons.account_box),
+                        title: Text(item),
+                        subtitle: Text('Numero'),
+                        onTap: (){},
+                        trailing: Icon(Icons.keyboard_arrow_right),
+                ),
+                Divider(height: 35)
+              ],
+              
             );
 
           }).toList();
